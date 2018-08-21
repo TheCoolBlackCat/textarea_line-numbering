@@ -13,7 +13,7 @@ function LNPrefix(ta) {
   ta.style.cssText = "width:90%;resize:none;";
 
   p.classList.add("LN_area");
-  p.style.cssText = "overflow:hidden !important;height:250px;";
+  p.style.cssText = "overflow:hidden;height:250px;";
 
   function appendLineNum(sb, line) {
     var n = document.createElement("div");
@@ -43,12 +43,6 @@ function LNPrefix(ta) {
     var style = this.parentElement.children[0].style,
         o = style.margin - this.scrollTop;
     style.marginTop = String(o)+"px";
+    this.parentElement.style.overflow = "hidden";
   });
 }
-
-// function LN_Prefix_INIT(ta) {
-  LNPrefix(input);
-  input.addEventListener("change", LNPrefix.bind(this, input));
-// }
-
-// LN_Prefix_INIT(input);
