@@ -10,7 +10,7 @@ function LNPrefix(ta) {
   var p = ta.parentElement,
       lineCount = ta.value.split(/\r?\n/).length + 10;
 
-  ta.style.cssText = "width:90%;resize:none;";
+  ta.style.cssText = "width:90%;resize:none;line-height: normal !important;";
 
   p.classList.add("LN_area");
   p.style.cssText = "overflow:hidden;height:250px;";

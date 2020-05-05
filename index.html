@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>LNPrefix Example</title>
+    <style type="text/css">
+      body {
+        font-family: monospace;
+      }
+
+      div.LN_area {
+        /* Functionality */
+        height: 250px;
+      }
+
+      #myInput {
+        /* Style */
+        color: #000;
+        background: #FFF;
+        border: 1px solid grey;
+
+        /* Functionality */
+        padding-top: 0.25rem;
+        height: 240px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Example <strong>&lt;textarea&gt;</strong> with line numbers</h1>
+    <div>
+      <textarea id="myInput"></textarea>
+    </div>
+
+    <script type="text/javascript" src="ta-ln.min.js"></script>
+    <script type="text/javascript">
+      var input = document.getElementById("myInput");
+      
+      LNPrefix(input);
+      input.addEventListener("input", LNPrefix.bind(this, input));
+    </script>
+  </body>
+</html>
